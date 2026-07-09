@@ -186,3 +186,23 @@ body.dark-mode a {
         height: 38px;
     }
 }
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section ul li a,
+section a {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+section ul li:hover a,
+section p a:hover {
+    transform: translateX(2px);
+}
