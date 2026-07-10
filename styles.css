@@ -56,9 +56,10 @@ header {
 }
 
 header h1 {
-    font-size: 2.6rem;
+    font-size: 3.2rem;
     font-weight: 700;
-    margin-bottom: 0.6rem;
+    margin-bottom: 1rem;
+    display: block;
     background: linear-gradient(90deg, #8b7aff, #c084fc, #6ee7d8);
     -webkit-background-clip: text;
     background-clip: text;
@@ -290,4 +291,14 @@ body.dark-mode footer {
     section h2 { font-size: 1.3rem; }
     .profile-photo { width: 110px; height: 110px; }
     #navbar { gap: 1rem; font-size: 0.7rem; }
+}
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #8b7aff, #6ee7d8);
+    width: 0%;
+    z-index: 50;
+    transition: width 0.1s ease;
 }
