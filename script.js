@@ -52,3 +52,23 @@ window.addEventListener('scroll', () => {
     const scrollPercent = (scrollTop / docHeight) * 100;
     progressBar.style.width = scrollPercent + '%';
 });
+const menuToggle = document.getElementById('menu-toggle');
+const menuClose = document.getElementById('menu-close');
+const navbarMenu = document.getElementById('navbar');
+
+menuToggle.addEventListener('click', () => {
+    navbarMenu.classList.add('open');
+    menuClose.classList.add('open');
+});
+
+menuClose.addEventListener('click', () => {
+    navbarMenu.classList.remove('open');
+    menuClose.classList.remove('open');
+});
+
+document.querySelectorAll('#navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        navbarMenu.classList.remove('open');
+        menuClose.classList.remove('open');
+    });
+});
