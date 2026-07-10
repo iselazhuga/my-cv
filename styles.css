@@ -303,3 +303,38 @@ body.dark-mode footer {
     z-index: 50;
     transition: width 0.1s ease;
 }
+/* ===== Intro animation ===== */
+header h1,
+#typewriter,
+.profile-photo,
+#navbar {
+    opacity: 0;
+    animation: introFadeIn 0.8s ease forwards;
+}
+
+header h1 {
+    animation-delay: 0.1s;
+}
+
+#typewriter {
+    animation-delay: 0.5s;
+}
+
+.profile-photo {
+    animation-delay: 0.9s;
+}
+
+#navbar {
+    animation-delay: 1.2s;
+}
+
+@keyframes introFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
